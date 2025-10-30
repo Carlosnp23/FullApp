@@ -1,0 +1,10 @@
+#Project folder structure:
+
+* Controllers
+* Entities
+* Data
+* Services
+* DTOs
+* Mappings
+* Validators
+* Helpers
