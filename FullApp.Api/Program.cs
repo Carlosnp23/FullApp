@@ -3,7 +3,7 @@ using FullApp.Api.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models; // <- agregado para Swagger JWT
+using Microsoft.OpenApi.Models; // <- Added to Swagger JWT
 
 var builder = WebApplication.CreateBuilder(args);
 
