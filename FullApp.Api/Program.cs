@@ -1,4 +1,4 @@
-using System.Text;
+﻿using System.Text;
 using FullApp.Api.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;

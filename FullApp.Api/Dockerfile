@@ -10,10 +10,10 @@ WORKDIR /src
 # The '..' path is used because the Dockerfile is inside src/FullApp.Api, 
 # and the solution file is in the root directory (../.. from WORKDIR /src).
 COPY FullApp.sln .
-COPY src/FullApp.Api/FullApp.Api.csproj src/FullApp.Api/
-COPY src/FullApp.Core/FullApp.Core.csproj src/FullApp.Core/
-COPY src/FullApp.Infrastructure/FullApp.Infrastructure.csproj src/FullApp.Infrastructure/
-COPY src/FullApp.Shared/FullApp.Shared.csproj src/FullApp.Shared/
+COPY FullApp.Api/FullApp.Api.csproj FullApp.Api/
+COPY FullApp.Core/FullApp.Core.csproj FullApp.Core/
+COPY FullApp.Infrastructure/FullApp.Infrastructure.csproj FullApp.Infrastructure/
+COPY FullApp.Shared/FullApp.Shared.csproj FullApp.Shared/
 
 # 2. Restore NuGet dependencies for all projects in the solution
 RUN dotnet restore FullApp.sln
@@ -24,7 +24,7 @@ COPY . .
 
 # 4. Publish the API project (build in Release mode)
 # This command builds the entire solution and publishes the entry point project.
-WORKDIR /src/src/FullApp.Api
+WORKDIR /src/FullApp.Api
 RUN dotnet publish -c Release -o /app/publish
 
 # ---
